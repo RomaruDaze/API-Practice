@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デデデ's Official Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Deadly<span style="color: red;">Death</span>Deadliest's Official Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#HomeSection">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#GameplaySection">Gameplay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#LeaderboardSection">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ContactSection">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bgbody">
+        <div class="home" id="HomeSection">
+            <h2 class="text-center"></h2>
+            <h2 class="text-center"></h2>
+            <h2 class="text-center">Introduction</h2>
+            <img src="images/logo(DEDEDE).gif" alt="Paris" class="center">
+            <p class="p1">Deadly<span style="color: red;">Death</span>Deadliest is a indie rouge-like games.
+                This game's goals is to challange players to beat the games as fast as possible while having the highest
+                score.
+                You need to fight your way through to defeat <span style="color: rgb(120, 0, 122);">Demon God</span>.
+                But to be able to reach him, you need to defeat all of his god-like retainers</p>
+                <p class="p2">Deadly<span style="color: red;">Death</span>Deadliest uses API to manage players' and enemies' status. 
+                    The API is also used to manage the game's savedata. If you are interested in developing games, 
+                    <a href="#ContactSection" style="color: red;">contact</a> me!</p>
+
+        </div>
+
+        <div class="game" id="GameplaySection">
+            <h2 class="text-center"></h2>
+            <h2 class="text-center"></h2>
+            <h2 class="text-center">Gameplay</h2>
+            <div class="text-center">
+                <button onclick="openGame()" type="button" class="btn btn-danger btn-lg" 
+                style="--bs-btn-padding-y: 1cm; --bs-btn-padding-x: 10cm; --bs-btn-font-size: 50pt;">PLAY</button>
+            </div>
+        </div>
+        
+
+
+        <div class="lboard" id="LeaderboardSection">
+            <h2 class="text-center"></h2>
+            <h2 class="text-center"></h2>
+            <h2 class="text-center">Leaderboard</h2>
+            <div class="container">
+                <h3 class="text">Top Player Now</h3>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Player Name</th>
+                            <th scope="col">Level</th>
+                            <th scope="col">Kill Count</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="container">
+                <h3 class="text">Login Data Log</h3>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Log Number</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="container" style="max-width: 1000px;">
+                <canvas id="lineChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+        <div class="contact" id="ContactSection">
+            <h2 class="text-center"></h2>
+            <h2 class="text-center"></h2>
+            <h2 class="text-center">Contact</h2>
+            <img src="images/self.png">
+            <p>They called me Romaru. Feel free to contact me!</p>
+            <form id="contactForm">
+                <input class="emailtext" type="email" id="email" name="email" placeholder="example@gmail.com">
+                <textarea id="message" name="message" placeholder="Message..."></textarea>
+                <button type="button" onclick="submitForm()">Send Message</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</body>
+
+</html>
